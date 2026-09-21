@@ -276,6 +276,7 @@ def run_twister_cmake_only(outdir: Path, vendor_filter: list) -> None:
         "PATH": path,
         "ZEPHYR_BASE": str(ZEPHYR_BASE),
         "HOME": os.environ.get("HOME", ""),
+        "USERPROFILE": os.environ.get("USERPROFILE", ""),
         "PYTHONPATH": os.environ.get("PYTHONPATH", ""),
     }
     if _WEST_VENV.exists():
